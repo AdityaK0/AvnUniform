@@ -1,0 +1,152 @@
+export default function Showcase() {
+  const uniforms = [
+    {
+      id: 1,
+      title: "Corporate Uniforms",
+      category: "Business",
+      image: ["/avn_data/corporate/c1.jpeg",
+              "/avn_data/corporate/c2.jpeg",
+              "/avn_data/corporate/c3.jpeg",
+
+             ],
+      description: "Professional corporate wear for offices and businesses",
+      fabrics: ["Micro Fabric 180GSM", "Dry-Fit 180GSM"],
+    },
+    {
+      id: 2,
+      title: "Hotel Uniforms",
+      category: "Hospitality",
+            image: ["/avn_data/hotel/h1.jpeg",
+              "/avn_data/hotel/h2.jpeg",
+              "/avn_data/hotel/h3.jpeg",
+              "/avn_data/hotel/h4.jpeg",
+              "/avn_data/hotel/h5.jpeg",
+              "/avn_data/hotel/h6.jpeg",
+
+            ],
+
+      description: "Elegant uniforms for hotel staff and hospitality industry",
+      fabrics: ["Honey Comb 180-200GSM", "Spun Matty 200-220GSM"],
+    },
+    {
+      id: 3,
+      title: "Hospital Uniforms",
+      category: "Healthcare",
+      image: ["/avn_data/hospital/h1.jpeg",],
+      description: "Comfortable and hygienic uniforms for medical professionals",
+      fabrics: ["PC Cotton 200-220GSM", "Cotton Dry-Fit 240GSM"],
+    },
+    {
+      id: 9,
+      title: "Event/Festival Tshirts",
+      category: "Event",
+      image: [ "/avn_data/event/e1.jpeg",
+             "/avn_data/event/e2.jpeg",
+             "/avn_data/event/e3.jpeg",
+             
+      ],
+      description: "Customized design and comfortable Tshirts for every Events/Festivals",
+      fabrics: ["Polo Knit 200GSM", "Cotton Polo Tipping 240GSM"],
+    },
+            {
+      id: 4,
+      title: "Industrial Boiler Suits",
+      category: "Industrial",
+      image: [ "/avn_data/industrial_suits/i3.jpeg",
+        "/avn_data/industrial_suits/i2.jpeg",
+        "/avn_data/industrial_suits/i1.jpeg",
+        "/avn_data/industrial_suits/i4.jpeg",
+      ],
+      description: "Durable and comfortable uniforms for students",
+      fabrics: ["Polo Knit 200GSM", "Cotton Polo Tipping 240GSM"],
+    },
+
+
+
+
+        {
+      id: 5,
+      title: "Caps",
+      category: "Custom",
+      image: [ "/avn_data/caps/c2.jpeg",
+             "/avn_data/caps/c3.jpeg",
+             "/avn_data/caps/c1.jpeg",
+      ],
+      description: "Durable and comfortable caps for everyone",
+      fabrics: ["Polo Knit 200GSM", "Cotton Polo Tipping 240GSM"],
+    },
+    {
+      id: 6,
+      title: "Security Uniforms",
+      category: "Security",
+      image: [ "/avn_data/security_uniforms/s1.jpeg",],
+      description: "Professional security uniforms with durability",
+      fabrics: ["Spun Matty 200-220GSM", "PC Cotton 200-220GSM"],
+    },
+        {
+      id: 7,
+      title: "School Uniforms",
+      category: "Education",
+      image: [ "/avn_data/hotel/h6.jpeg",],
+      description: "Durable and comfortable uniforms for students",
+      fabrics: ["Polo Knit 200GSM", "Cotton Polo Tipping 240GSM"],
+    },
+    {
+      id: 8,
+      title: "Housekeeping Uniforms",
+      category: "Service",
+      image: [ "/avn_data/hotel/h6.jpeg",],
+      description: "Practical uniforms for housekeeping and maintenance staff",
+      fabrics: ["Micro Fabric 180GSM", "Dry-Fit 180GSM"],
+    },
+  ]
+
+  return (
+    <section id="showcase" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Product Catalog</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Explore our collection of custom t-shirt designs across various styles and categories
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {uniforms.map((uniform) => (
+            <div key={uniform.id} className="group cursor-pointer">
+              <div className="overflow-x-auto  gap-5  pb-2 flex items-center p-3 rounded-lg bg-gray-100 aspect-square mb-4">
+                {
+                  uniform.image.map((img)=>{
+                    return (
+                          <img
+                            src={img || "/placeholder.svg"}
+                            alt={uniform.title}
+                            className="h-75 w-75 object-cover flex-shrink-0 rounded-lg transition-transform duration-300 group-hover:scale-105"
+                          />
+                    )
+                  })
+                }
+
+                <div className="absolute inset-0 bg-black/0  transition-colors duration-300"></div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-gray-900">{uniform.title}</h3>
+                  <span className="text-sm text-blue-600 font-medium">{uniform.category}</span>
+                </div>
+                <p className="text-gray-600">{uniform.description}</p>
+                <div className="flex flex-wrap gap-1 mt-2">
+                  {uniform.fabrics.map((fabric, idx) => (
+                    <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                      {fabric}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
