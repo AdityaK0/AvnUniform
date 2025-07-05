@@ -60,7 +60,6 @@ export default function Header() {
     <div className="max-w-6xl mx-auto rounded-full bg-white/90 backdrop-blur-md shadow-md border border-gray-200 px-6 py-3 flex items-center justify-between">
       <div className="text-2xl font-bold text-gray-900">AVN Uniforms</div>
 
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex space-x-8">
         <a href="#home" className="text-gray-700 hover:text-gray-900 transition-colors">
           Home

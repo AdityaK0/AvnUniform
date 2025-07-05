@@ -27,6 +27,7 @@
 //     </section>
 //   )
 // }
+import { HashLink } from 'react-router-hash-link';
 export default function Hero() {
   return (
     <section
@@ -51,6 +52,9 @@ export default function Hero() {
             >
               View Our Catalog
             </a>
+               
+
+
             <a
               href="#contact"
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium text-lg hover:border-gray-500 transition-all"

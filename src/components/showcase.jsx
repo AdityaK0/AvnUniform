@@ -4,9 +4,10 @@ export default function Showcase() {
       id: 1,
       title: "Corporate Uniforms",
       category: "Business",
-      image: ["/avn_data/corporate/c1.jpeg",
+      image: [
               "/avn_data/corporate/c2.jpeg",
               "/avn_data/corporate/c3.jpeg",
+              "/avn_data/corporate/c1.jpeg",
 
              ],
       description: "Professional corporate wear for offices and businesses",
@@ -16,12 +17,14 @@ export default function Showcase() {
       id: 2,
       title: "Hotel Uniforms",
       category: "Hospitality",
-            image: ["/avn_data/hotel/h1.jpeg",
+            image: [
+               "/avn_data/hotel/h4.jpeg",
               "/avn_data/hotel/h2.jpeg",
               "/avn_data/hotel/h3.jpeg",
-              "/avn_data/hotel/h4.jpeg",
+             
               "/avn_data/hotel/h5.jpeg",
               "/avn_data/hotel/h6.jpeg",
+              "/avn_data/hotel/h1.jpeg",
 
             ],
 
@@ -32,7 +35,7 @@ export default function Showcase() {
       id: 3,
       title: "Hospital Uniforms",
       category: "Healthcare",
-      image: ["/avn_data/hospital/h1.jpeg",],
+      image: ["/avn_data/hospital/h2.jpeg","/avn_data/hospital/h1.jpeg",],
       description: "Comfortable and hygienic uniforms for medical professionals",
       fabrics: ["PC Cotton 200-220GSM", "Cotton Dry-Fit 240GSM"],
     },
@@ -79,7 +82,14 @@ export default function Showcase() {
       id: 6,
       title: "Security Uniforms",
       category: "Security",
-      image: [ "/avn_data/security_uniforms/s1.jpeg",],
+      image: [ "/avn_data/security_uniforms/s2.jpeg","/avn_data/security_uniforms/s1.jpeg",
+        "/avn_data/security_uniforms/s3.jpeg",
+        "/avn_data/security_uniforms/s4.jpeg",
+        "/avn_data/security_uniforms/s5.jpeg",
+
+        
+
+      ],
       description: "Professional security uniforms with durability",
       fabrics: ["Spun Matty 200-220GSM", "PC Cotton 200-220GSM"],
     },
@@ -87,7 +97,7 @@ export default function Showcase() {
       id: 7,
       title: "School Uniforms",
       category: "Education",
-      image: [ "/avn_data/hotel/h6.jpeg",],
+      image: [ "/avn_data/school/s1.jpeg",],
       description: "Durable and comfortable uniforms for students",
       fabrics: ["Polo Knit 200GSM", "Cotton Polo Tipping 240GSM"],
     },
@@ -95,14 +105,14 @@ export default function Showcase() {
       id: 8,
       title: "Housekeeping Uniforms",
       category: "Service",
-      image: [ "/avn_data/hotel/h6.jpeg",],
+      image: [ "/avn_data/hotel/h7.jpeg",],
       description: "Practical uniforms for housekeeping and maintenance staff",
       fabrics: ["Micro Fabric 180GSM", "Dry-Fit 180GSM"],
     },
   ]
 
   return (
-    <section id="showcase" className="py-16 bg-white">
+    <section id="showcase" className="py-16 bg-white mt-5" >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Product Catalog</h2>
